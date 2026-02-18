@@ -11,6 +11,8 @@
   <link rel="canonical" href="https://platworks.tech/" />
   <meta name="theme-color" content="#3A8DFF" />
 
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="PlatWorks.tech — Eliminate Operational Drag with Custom AI Systems" />
   <meta property="og:description" content="Custom AI &amp; software systems that remove manual workflows, reduce errors, and unlock hidden operational capacity." />
@@ -48,11 +50,10 @@
     }
     .divider { margin-bottom: 4rem !important; }
 
-    .hero-heading-rest { font-weight: 470; }
-    /* Shine effect on "Eliminate Operational Drag" - on load + hover, once each */
+    /* Shine effect on full hero heading - on load + hover, single pass only */
     .hero-shine {
-      background: linear-gradient(110deg, #0f172a 0%, #0f172a 35%, #a5c1f5eb 50%, #0f172a 65%, #0f172a 100%);
-      background-size: 220% 100%;
+      background: linear-gradient(90deg, #0f172a 0%, #0f172a 40%, #a5c1f5 48%, #a5c1f5 52%, #0f172a 60%, #0f172a 100%);
+      background-size: 250% 100%;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -60,17 +61,18 @@
       display: inline-block;
       font-weight: 470;
       margin-bottom: 5px;
-      animation: shine-load 2s ease-out 1s 1 forwards;
+      animation: shine-load 1.8s ease-out 1s 1 forwards;
     }
     .hero-shine:hover {
-      animation: shine-hover 1.2s ease-out 1 forwards;
+      animation: shine-hover 1s ease-out 1 forwards;
     }
     @keyframes shine-load {
-      to { background-position: -200% 0; }
+      from { background-position: 100% 0; }
+      to { background-position: -150% 0; }
     }
     @keyframes shine-hover {
-      0% { background-position: 100% 0; }
-      100% { background-position: -200% 0; }
+      from { background-position: 100% 0; }
+      to { background-position: -150% 0; }
     }
   </style>
 
@@ -170,12 +172,12 @@
         </div>
 
         <h1 id="hero-heading" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] tracking-tight mb-6 text-slate-900 reveal reveal-delay-1">
-          <span class="hero-shine">Eliminate Operational Drag</span><span class="hero-heading-rest"> with <span class="text-gradient">Custom AI Systems.</span></span>
+          <span class="hero-shine">Eliminate Operational Drag with Custom AI Systems.</span>
         </h1>
 
         <p class="text-lg lg:text-xl text-slate-500 leading-relaxed mb-10 max-w-2xl mx-auto reveal reveal-delay-2">
-          PlatWorks designs and implements AI&#8209;powered software that removes manual workflows, reduces errors, and unlocks hidden capacity inside your organization.
-        </p>
+          PlatWorks uncovers where time is being lost and builds AI-powered software to eliminate it.
+          We remove manual processes, reduce errors, and help your team move faster.        </p>
 
         <div class="flex flex-wrap justify-center gap-4 mb-10 reveal reveal-delay-3">
           <a href="https://cal.com/pranav-uttarkar/30min" target="_blank" rel="noopener" class="btn-primary">
