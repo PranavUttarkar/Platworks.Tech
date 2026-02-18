@@ -32,12 +32,12 @@
 
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://platworks.tech/sitemap.xml" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Fonts: system stack (no cross-origin requests = no Safari privacy warnings) -->
+  <!-- system-ui maps to SF Pro on iOS/macOS, Roboto on Android, Segoe UI on Windows -->
 
-  <script type="module" crossorigin src="/assets/index-BnWD8kui.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-CxSEBTbf.css">
+  <link rel="stylesheet" href="/assets/index-CxSEBTbf.css">
+  <script type="module" src="/assets/index-BnWD8kui.js" defer></script>
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
   <style>
     /* Lighter hero blue + reduced section spacing */
     .hero-liquid-blob::before { background: linear-gradient(135deg, #7eb8ff4a, #a8c8ff2e 35%, #00c8f01a 65%, #8fc4ff3a) !important; }
@@ -49,6 +49,20 @@
       main section:first-of-type { padding-top: 6rem !important; padding-bottom: 4rem !important; }
     }
     .divider { margin-bottom: 4rem !important; }
+
+    /* Mobile performance: reduce expensive GPU operations */
+    @media (max-width: 767px) {
+      .bg-gradient-blob { filter: blur(60px) !important; opacity: 0.5; }
+      .hero-liquid-blob { display: none !important; }
+      .glass { backdrop-filter: blur(8px) saturate(1.2) !important; -webkit-backdrop-filter: blur(8px) saturate(1.2) !important; }
+      .nav-blur { backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; }
+      .glass-shimmer::after { display: none !important; }
+      .cta-panel-glow::before { animation: none !important; opacity: 0.6 !important; }
+    }
+
+    /* Auto-reveal content after 2s if JS hasn't fired yet (slow connections) */
+    @keyframes autoReveal { to { opacity: 1; transform: translateY(0); } }
+    .reveal { animation: autoReveal 0.5s ease-out 2s forwards; }
 
     /* Shine effect on full hero heading - on load + hover, single pass only */
     .hero-shine {
