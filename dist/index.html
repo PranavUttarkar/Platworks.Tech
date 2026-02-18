@@ -58,21 +58,26 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
       background-position: 100% 0;
-      display: inline-block;
+      display: inline;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
       font-weight: 470;
-      margin-bottom: 5px;
       animation: shine-load 1.8s ease-out 1s 1 forwards;
     }
     .hero-shine:hover {
       animation: shine-hover 1s ease-out 1 forwards;
     }
+    .hero-highlight {
+      color: #3A8DFF;
+      font-weight: 700;
+    }
     @keyframes shine-load {
       from { background-position: 100% 0; }
-      to { background-position: -150% 0; }
+      to { background-position: -160% 0; }
     }
     @keyframes shine-hover {
       from { background-position: 100% 0; }
-      to { background-position: -150% 0; }
+      to { background-position: -160% 0; }
     }
   </style>
 
@@ -138,7 +143,7 @@
       <button id="nav-toggle" class="md:hidden relative z-50 w-8 h-8 flex flex-col items-center justify-center gap-1.5" aria-label="Toggle menu">
         <span class="nav-bar w-6 h-0.5 bg-slate-800 rounded transition-all duration-300"></span>
         <span class="nav-bar w-6 h-0.5 bg-slate-800 rounded transition-all duration-300"></span>
-        <span class="nav-bar w-4 h-0.5 bg-slate-800 rounded transition-all duration-300 ml-auto"></span>
+        <span class="nav-bar w-6 h-0.5 bg-slate-800 rounded transition-all duration-300"></span>
       </button>
     </div>
   </nav>
@@ -172,7 +177,7 @@
         </div>
 
         <h1 id="hero-heading" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] tracking-tight mb-6 text-slate-900 reveal reveal-delay-1">
-          <span class="hero-shine">Eliminate Operational Drag with Custom AI Systems.</span>
+          <span class="hero-shine">Eliminate Operational Drag with</span> <span class="hero-highlight">Custom AI Systems.</span>
         </h1>
 
         <p class="text-lg lg:text-xl text-slate-500 leading-relaxed mb-10 max-w-2xl mx-auto reveal reveal-delay-2">
