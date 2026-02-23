@@ -129,6 +129,36 @@
     .industry-pill { display: inline-block; padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 500; color: #334155; background: linear-gradient(165deg, rgba(255,255,255,0.9), rgba(241,245,249,0.7)); border: 1px solid rgba(255,255,255,0.8); border-radius: 12px; box-shadow: 0 1px 2px rgba(15,23,42,0.04); transition: color 0.2s ease, border-color 0.2s ease; }
     .industry-pill:hover { color: #0f172a; border-color: rgba(58,141,255,0.25); }
     .audit-num { font-weight: 700; color: #3a8dff; min-width: 1.25rem; }
+    /* Schedule Free Assessment: blue + outlined by default */
+    .btn-outline-blue {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.875rem 2rem; font-weight: 500; font-size: 0.95rem; border-radius: 14px;
+      color: #3a8dff !important;
+      border: 1.5px solid rgba(58,141,255,0.6);
+      background: linear-gradient(165deg, rgba(255,255,255,0.9), rgba(248,252,255,0.7));
+      text-decoration: none; transition: all 0.25s ease;
+      box-shadow: 0 1px 2px rgba(255,255,255,0.6) inset, 0 2px 8px rgba(58,141,255,0.08);
+    }
+    .btn-outline-blue:hover {
+      color: #2563eb !important;
+      border-color: #3a8dff;
+      background: linear-gradient(165deg, rgba(255,255,255,0.95), rgba(240,248,255,0.85));
+      box-shadow: 0 2px 12px rgba(58,141,255,0.15);
+      transform: translateY(-1px);
+    }
+    /* How We Work With You: improve readability (less blue tint, stronger text) */
+    #packages .bg-gradient-blob { opacity: 0.35 !important; }
+    #packages .glass {
+      background: linear-gradient(165deg, rgba(255,255,255,0.92), rgba(255,255,255,0.78) 40%, rgba(248,250,252,0.82)) !important;
+      border-color: rgba(226,232,240,0.8) !important;
+    }
+    #packages .glass-elevated {
+      background: linear-gradient(165deg, rgba(255,255,255,0.94), rgba(248,252,255,0.88) 40%, rgba(255,255,255,0.9)) !important;
+      border-color: rgba(203,213,225,0.6) !important;
+    }
+    #packages .text-slate-500 { color: #475569 !important; }
+    #packages .text-slate-400 { color: #64748b !important; }
+    #packages h3.text-slate-900 { color: #0f172a !important; }
     .impl-section-spacing { margin-top: 7rem; }
     .who-section-spacing { margin-top: 6rem; }
     .impl-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
@@ -363,7 +393,7 @@
               <li class="flex items-start gap-3 text-sm text-slate-500"><span class="check-icon mt-0.5">✓</span>Strategic recommendations</li>
             </ul>
             <p class="text-slate-400 text-xs mb-5">Identify if a deeper audit makes sense.</p>
-            <a href="https://cal.com/pranav-uttarkar/30min" target="_blank" rel="noopener" class="btn-ghost text-center justify-center w-full">Schedule Free Assessment</a>
+            <a href="https://cal.com/pranav-uttarkar/30min" target="_blank" rel="noopener" class="btn-outline-blue w-full">Schedule Free Assessment</a>
           </div>
 
           <!-- Package 2 (Highlighted) -->
